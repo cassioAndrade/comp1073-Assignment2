@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Image Gallery | COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<h1>Image Gallery</h1>
+	<section id="gallery">
+		<div class="imgBox"><img src="images/flowers-white-large.jpg"></div>
+		<div id="captionBox"><p align="center"><b></b></p></div>
+		<ul class="thumb">
+			<li><a class="mySlides" href="images/flowers-white-large.jpg" alt="Daffodils in Sentmaring park, Münster, North Rhine-Westfalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0"><img src="images/flowers-white-small.jpg"></a></li>
+			<li><a class="mySlides" href="images/flowers-yellow-large.jpg" alt="Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0"><img src="images/flowers-yellow-small.jpg"></a></li>
+			<li><a class="mySlides" href="images/flowers-pink-large.jpg" alt="Market in Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0"><img src="images/flowers-pink-small.jpg"></a></li>
+			<li><a class="mySlides" href="images/flowers-red-large.jpg" alt="Poppies in cornfield, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0"><img src="images/flowers-red-small.jpg"></a></li>
+			<li><a class="mySlides" href="images/flowers-purple-large.jpg" alt="Sentmaring Park, Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0"><img src="images/flowers-purple-small.jpg"></a></li>
+			
+		</ul>
+		
+	</section>
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.js"
+	  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	  crossorigin="anonymous">	
+  	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.thumb a').click(function(e){
+				e.preventDefault();
+				$('.imgBox img').attr("src", $(this).attr("href"));
+				$('#captionBox p b').html($(this).attr("alt"));
+			})
+		})
+	</script>
+	<!-- PHOTO CREDITS
+	Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=61514522
+
+	Poppies in cornfield, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40957238
+
+	Daffodils in Sentmaring park, Münster, North Rhine-Westfalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48211466
+
+	Sentmaring Park, Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48576226
+
+	Market in Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=62071586
+	-->
+</body>
+</html>
